@@ -93,3 +93,10 @@ h1{
     filter: brightness(10);
     transition-duration: 0.8s;
 }
+
+
+
+.wallpaper{
+    filter: opacity(0.9);
+    position:relative;
+}
