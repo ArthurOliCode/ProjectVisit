@@ -16,15 +16,15 @@
     <nav id="navbar-AdviNum" class="navbar navbar-dark bg-dark fixed-top" data-bs-theme="black">
         <div class="container-fluid">
                 <nav class="navbar bg-body-tertiary bg-dark fixed-top" data-bs-theme="dark">
-                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
+                        <button class="navbar-toggler animated-Button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon animated-hamburguer"></span>
                         </button>
                         <ul class="nav nav-pills" style="--bs-scroll-height: 100px;">
                             <li class="nav-item">
-                                <a class="nav-link" href="#scrollspyHeading1">Introdução</a>
+                                <a class="nav-link link-light animated-Button" href="#scrollspyHeading1">Introdução</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#scrollspyHeading2">Início</a>
+                                <a class="nav-link link-light animated-Button" href="#scrollspyHeading2">Início</a>
                             </li>
                         </ul>
                         <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
@@ -66,21 +66,21 @@
 
     <div data-bs-spy="scroll" class="scrollpy-example bg-body-tertiary p-3 rounded-2" data-bs-target="#navbar-AdviNum" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" tabindex="0">
         <div class="container p-5 mt-3">
-            <div class="alert alert-info alert-dismissible fade show" role="alert">
+            <div class="alert alert-info alert-dismissible fade show animated-alert" role="alert">
                 <div class="container text-center">
                     Veja as imagens a seguir, memorize alguma delas, e eu irei adivinhar.
                 </div>
-                <button type="btn" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                <button type="btn" class="btn-close animated-Button" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
-            <div class="alert alert-info alert-dismissible fade show" role="alert">
+            <div class="alert alert-info alert-dismissible fade show animated-alert" role="alert">
                 <div class="container text-center ">
                     Apenas errarei, caso você não indentifique corretamente as cartas!
                 </div>
-                <button type="btn" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                <button type="btn" class="btn-close animated-Button" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
                 <div class="id-TabelaNumeros">
                     <div class="container text-center">
-                        <table class="table table-hover table-dark table-striped border border-end-0 border-info table-bordered">
+                        <table class="table table-hover table-dark table-striped border border-end-0 border-info table-bordered animated-table">
                             <thead class="table-dark">
                                 <tr>
                                     <th scope="col">#</th>
@@ -640,8 +640,8 @@
                     </div>
                     <h1 style="margin-top: 3cm"></h1>
                 <div class="container text-center">
-                    <button type="button" class="btn btn-primary mt-3" onclick="respostas()">Ver o Resultado</button>
-                    <button type="reset" class="btn btn-secondary mt-3">Limpar Respostas</button>
+                    <button type="button" class="btn btn-primary mt-3 animated-Button" onclick="respostas()">Ver o Resultado</button>
+                    <button type="reset" class="btn btn-secondary mt-3 animated-Button">Limpar Respostas</button>
                 </div>
             </div>
         </div>
@@ -668,29 +668,117 @@
     
                 if (acertos > 0) {
                     document.body.innerHTML = `
+                    <nav class="navbar navbar-dark bg-dark fixed-top" data-bs-theme="black">
+                        <div class="container-fluid">
+                                <nav class="navbar bg-body-tertiary bg-dark fixed-top" data-bs-theme="dark">
+                                        <button class="navbar-toggler animated-Button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-label="Toggle navigation">
+                                            <span class="navbar-toggler-icon animated-hamburguer"></span>
+                                        </button>
+                                        <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+                                            <div class="offcanvas-header">
+                                                <h5 class="offcanvas-title" id="offcanvasMenuLabel"><a class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="Index4B.html">Menu de Jogos</a></h5>
+                                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                            </div>
+                                            <div class="offcanvas-body">
+                                                <div>
+                                                    Aqui estão alguns jogos para que você aprenda se divertindo!!!
+                                                </div>
+
+                                                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                                    <li class="nav-item dropdown">
+                                                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            Lista de Jogos
+                                                        </a>
+                                                        <ul class="dropdown-menu dropdown-menu-dark">
+                                                            <li><h6 class="dropdown-header">Adivinhação</h6></li>
+                                                            <li><a class="dropdown-item" href="AdivImg.html">Imagens</a></li>
+                                                            <li><a class="dropdown-item" href="AdivNum.html">Números</a></li>
+                                                            <li><hr class="dropdown-divider"></li>
+                                                            <li><h6 class="dropdown-header">Quizz</h6></li>
+                                                            <li><a class="dropdown-item" href="#">Quizz</a></li>
+                                                            <li><hr class="dropdown-divider"></li>
+                                                            <li><h6 class="dropdown-header">Tibet</h6></li>
+                                                            <li><a class="dropdown-item" href="#">Teste Tibet</a></li>
+                                                            <li><hr class="dropdown-divider"></li>
+                                                            <li><h6 class="dropdown-header">Jogo Livre</h6></li>
+                                                            <li><a class="dropdown-item" href="#">Jogo</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                </nav>
+                        </div>
+                    </nav>
+                    <div class="wallpaper" style="background-image: url(img/WPP_AdivNum.png);">
                         <div class="container text-center mt-3">
                             <div class="alert alert-success" role="alert">
-                                <h4 class="alert-heading">O número que você pensou foi: ` + acertos + `</h4>
+                                <h4 class="alert-heading" style="margin-top:2cm;">O número que você pensou foi: ` + acertos + `</h4>
                                 <hr>
-                                <img src="img/Akinator.png" class="img-fluid" alt="Adivinhador">
+                                <img src="img/Akinator.png" class="img-fluid animated-img rounded" alt="Adivinhador">
                                 <br><br>
-                                <a href="" class="btn btn-primary mt-3">Tentar Novamente</a>
+                                <a href="" class="btn btn-primary mt-3 animated-Button" style="margin-bottom:20cm;">Tentar Novamente</a>
                             </div>
                         </div>
+                    </div>
                     `;
                 } else {
                     document.body.innerHTML = `
+                    <nav class="navbar navbar-dark bg-dark fixed-top" data-bs-theme="black">
+                        <div class="container-fluid">
+                                <nav class="navbar bg-body-tertiary bg-dark fixed-top" data-bs-theme="dark">
+                                        <button class="navbar-toggler animated-Button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-label="Toggle navigation">
+                                            <span class="navbar-toggler-icon animated-hamburguer"></span>
+                                        </button>
+                                        <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+                                            <div class="offcanvas-header">
+                                                <h5 class="offcanvas-title" id="offcanvasMenuLabel"><a class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="Index4B.html">Menu de Jogos</a></h5>
+                                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                            </div>
+                                            <div class="offcanvas-body">
+                                                <div>
+                                                    Aqui estão alguns jogos para que você aprenda se divertindo!!!
+                                                </div>
+
+                                                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                                    <li class="nav-item dropdown">
+                                                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            Lista de Jogos
+                                                        </a>
+                                                        <ul class="dropdown-menu dropdown-menu-dark">
+                                                            <li><h6 class="dropdown-header">Adivinhação</h6></li>
+                                                            <li><a class="dropdown-item" href="AdivImg.html">Imagens</a></li>
+                                                            <li><a class="dropdown-item" href="AdivNum.html">Números</a></li>
+                                                            <li><hr class="dropdown-divider"></li>
+                                                            <li><h6 class="dropdown-header">Quizz</h6></li>
+                                                            <li><a class="dropdown-item" href="#">Quizz</a></li>
+                                                            <li><hr class="dropdown-divider"></li>
+                                                            <li><h6 class="dropdown-header">Tibet</h6></li>
+                                                            <li><a class="dropdown-item" href="#">Teste Tibet</a></li>
+                                                            <li><hr class="dropdown-divider"></li>
+                                                            <li><h6 class="dropdown-header">Jogo Livre</h6></li>
+                                                            <li><a class="dropdown-item" href="#">Jogo</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                </nav>
+                        </div>
+                    </nav>
+                    <div class="wallpaper" style="background-image: url(img/WPP_AdivNum.png);">
                         <div class="container p-5 mt-3">
-                            <div class="alert alert-info alert-dismissible fade show" role="alert">
+                            <div class="alert alert-info alert-dismissible fade show animated-alert" role="alert">
                                 <div class="container text-center">
                                     Você não selecionou as opções corretamente!
                                 </div>
-                            <button type="btn" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            <button type="btn" class="btn-close animated-Button" data-bs-dismiss="alert" aria-label="Close"></button>
                             </div>
                             <div class="container text-center">
-                                <a href="" class="btn btn-primary mt-3">Tentar Novamente</a>
+                                <a href="" class="btn btn-primary mt-3 animated-Button" style="margin-bottom:20cm;">Tentar Novamente</a>
                             </div>
                         </div>
+                    </div>
                     `;
                 }
             }
