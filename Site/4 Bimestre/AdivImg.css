@@ -1,5 +1,12 @@
+.bg-body-tertiary {
+    --bs-bg-opacity: 1;
+    background-color: rgba(248,249,250, 1) !important;
+}
 
-
+.gradient-bg{
+    background: linear-gradient(70deg, rgb(0, 0, 0), rgb(83, 83, 83));
+    color: whitesmoke;
+}
 
 .animated-img:hover{
     transform: scale(1.1);
@@ -91,4 +98,30 @@ h1{
 .wallpaper{
     filter: opacity(0.9);
     position:relative;
+}
+
+
+.image-container {
+    margin-top: 0.5cm;
+    position: relative;
+    width: 600px;
+    height: auto;
+}
+
+/* Estilo do texto oculto */
+.overlay-text {
+    position:absolute;
+    bottom: 20%;
+    left: 68%;
+    color: whitesmoke;
+    width: 100%;
+    text-align: justify;
+    padding: 10px;
+    opacity: 0; /* Invisível inicialmente */
+    transition: opacity 0.5s ease; /* Transição suave */
+}
+
+/* Quando o mouse passa sobre o contêiner, exibe o texto */
+.image-container:hover .overlay-text {
+    opacity: 1;
 }
