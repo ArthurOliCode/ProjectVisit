@@ -1,0 +1,57 @@
+/* Configurações de background e layout */
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #000; /* Fundo escuro para destacar as faíscas */
+    position: relative;
+}
+
+.content {
+    position: relative;
+    z-index: 1; /* Coloca o conteúdo acima das faíscas */
+    color: white;
+}
+
+/* Container das faíscas */
+.spark-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none; /* Permite que as faíscas fiquem apenas como decoração */
+    z-index: 0;
+}
+
+/* Estilização das faíscas */
+.spark {
+    position: absolute;
+    bottom: -10px;
+    width: 4px;
+    height: 10px;
+    background: rgba(255, 215, 0, 0.8); /* Amarelo-ouro para a cor da faísca */
+    border-radius: 50%;
+    opacity: 0;
+    filter: blur(3px); /* Aplica um leve desfoque */
+    animation: rise 3s linear infinite;
+}
+
+/* Animação das faíscas */
+@keyframes rise {
+    0% {
+        transform: translateY(0) scale(0.5); /* Ponto inicial */
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(-100vh) scale(1); /* Ponto final */
+        opacity: 0;
+    }
+}
