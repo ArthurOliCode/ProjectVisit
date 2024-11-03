@@ -4,8 +4,22 @@
 }
 
 .gradient-bg{
-    background: linear-gradient(70deg, rgb(0, 0, 0), rgb(83, 83, 83));
+    background: linear-gradient(90deg, rgb(0, 0, 0), rgb(83, 83, 83), rgb(128, 128, 128) );
+    background-size: 400% 400%;
+    animation: gradientAnimation 12s ease infinite;
     color: whitesmoke;
+}
+
+@Keyframes gradientAnimation{
+    0%{
+       background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
 }
 
 .animated-img:hover{
