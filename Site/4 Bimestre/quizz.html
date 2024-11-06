@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="img/IconGame1.png">
+    <link rel="stylesheet" href="Index.css">
     <link rel="stylesheet" href="quizz.css">
 
     <link rel="stylesheet" href="AdivImg.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <title>Quizz de Jogos</title>
+    <title>ProjectVs</title>
     <style>
         body {
             color: #f8f9fa;
@@ -20,12 +21,30 @@
         .question {
             margin: 20px 0;
         }
+         /* CSS para controlar a exibição dos itens com base na altura da tela */
+         @media (min-height: 800px) {
+            .nav-item.dropdown {
+                display: none;
+            }
+            .nav-item.game-item {
+                display: block;
+            }
+        }
+    
+        @media (max-height: 799px) {
+            .nav-item.dropdown {
+                display: block;
+            }
+            .nav-item.game-item {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body class="Bgcolor">
     <nav id="navbar-AdivImg" class="navbar navbar-dark bg-dark fixed-top" data-bs-theme="black">
         <div class="container-fluid">
-            <nav class="navbar bg-body-tertiary bg-dark fixed-top" data-bs-theme="dark">
+            <nav class="navbar bg-body-tertiary bg-dark fixed-top shadow-NavBar" data-bs-theme="dark">
                 <button class="navbar-toggler animated-Button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon animated-hamburguer"></span>
                 </button>
@@ -45,9 +64,7 @@
                         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">
-                        <div>
-                            Aqui estão alguns jogos para que você aprenda se divertindo!!!
-                        </div>
+                        <div style="font-size: larger; margin: 5%;">Aqui estão alguns jogos para que você aprenda se divertindo!!!</div>
 
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                             <li class="nav-item dropdown">
@@ -61,15 +78,24 @@
                                     <li><a class="dropdown-item" href="LevelsNum.html">Torre de desafios</a></li>
                                     <li><hr class="dropdown-divider"></li>
                                     <li><h6 class="dropdown-header">Quizz</a></li>
-                                    <li><a class="dropdown-item" href="quizz.html">Quizz</a></li>
+                                    <li><a class="dropdown-item" href="quizz.html">Conhecimentos gerais</a></li>
+                                    <li><a class="dropdown-item" href="qmvc.html">Seu quizz</a></li>
                                     <li><hr class="dropdown-divider"></li>
                                     <li><h6 class="dropdown-header">Tibet</h6></li>
                                     <li><a class="dropdown-item" href="#">Teste Tibet</a></li>
-                                    <li><hr class="dropdown-divider"></li>
-                                    <li><h6 class="dropdown-header">Jogo Livre</h6></li>
-                                    <li><a class="dropdown-item" href="#">Jogo</a></li>
+
+
                                 </ul>
                             </li>
+                            <div style="margin-left: 5%; margin-top: 5%; font-size: larger;">
+                                <!-- Itens individuais visíveis em telas maiores -->
+                                <li class="nav-item game-item"><a class="nav-link" href="AdivImg.html">Imagens</a></li>
+                                <li class="nav-item game-item"><a class="nav-link" href="AdivNum.html">Números</a></li>
+                                <li class="nav-item game-item"><a class="nav-link" href="LevelsNum.html">Torre de desafios</a></li>
+                                <li class="nav-item game-item"><a class="nav-link" href="quizz.html">Conhecimentos gerais</a></li>
+                                <li class="nav-item game-item"><a class="nav-link" href="qmvc.html">Seu quizz</a></li>
+                                <li class="nav-item game-item"><a class="nav-link" href="#">Teste Tibet</a></li>
+                            </div>
                         </ul>
                     </div>
                 </div>
@@ -140,13 +166,15 @@
 
                 <div class="bg-card">
                     <div class="card" style="border-radius: 18px; margin-bottom: 2.5cm;">
-                        <div class="mb-3 question">
-                            <label class="form-label" style="font-family: Arial; font-size: 0.6cm; margin:0.3cm">Qual é o nome da franquia de jogos que apresenta criaturas chamadas "Pokémon"?</label>
+                        <div class="mb-3 question"> 
+                            <label class="form-label" style="font-family: Arial; font-size: 0.6cm; margin:0.3cm">
+                                Qual destas franquias, lançada originalmente no Japão, envolve capturar criaturas para treiná-las e colocá-las em batalhas, sendo conhecida pelo slogan "Gotta Catch 'Em All"?
+                            </label>
                             <div style="text-align:justify; margin-left:0.5cm; font-size:0.5cm;">
-                                <input type="radio" name="r3"  value="Digimon"> Digimon<br>
-                                <input type="radio" name="r3"  value="Pokémon"> Pokémon<br>
-                                <input type="radio" name="r3"  value="Monster Hunter"> Monster Hunter<br>
-                                <input type="radio" name="r3"  value="Final Fantasy"> Final Fantasy
+                                <input type="radio" name="r3" value="Pocket Monsters"> Pocket Monsters<br>
+                                <input type="radio" name="r3" value="Monster Tamers"> Monster Tamers<br>
+                                <input type="radio" name="r3" value="Creature Collectors"> Creature Collectors<br>
+                                <input type="radio" name="r3" value="Digital Beastmasters"> Digital Beastmasters<br>
                             </div>
                         </div>
                     </div>
@@ -155,12 +183,14 @@
                 <div class="bg-card">
                     <div class="card" style="border-radius: 18px; margin-bottom: 2.5cm;">
                         <div class="mb-3 question">
-                            <label class="form-label" style="font-family: Arial; font-size: 0.6cm; margin:0.3cm">Em qual jogo você pode construir e destruir blocos em um mundo 3D?</label>
+                            <label class="form-label" style="font-family: Arial; font-size: 0.6cm; margin:0.3cm">
+                                Qual dessas plataformas permite aos jogadores alterar e manipular um ambiente virtual composto por unidades cúbicas, promovendo tanto a criação quanto a modificação livre de estruturas?
+                            </label>
                             <div style="text-align:justify; margin-left:0.5cm; font-size:0.5cm;">
-                                <input type="radio" name="r4"  value="Minecraft"> Minecraft<br>
-                                <input type="radio" name="r4"  value="Terraria"> Terraria<br>
-                                <input type="radio" name="r4"  value="Roblox"> Roblox<br>
-                                <input type="radio" name="r4"  value="Fortnite"> Fortnite
+                                <input type="radio" name="r4" value="Roblox"> Roblox<br>
+                                <input type="radio" name="r4" value="Terraria"> Terraria<br>
+                                <input type="radio" name="r4" value="Minecraft"> Minecraft<br>
+                                <input type="radio" name="r4" value="7 Days to Die"> 7 Days to Die<br>
                             </div>
                         </div>
                     </div>
@@ -169,12 +199,14 @@
                 <div class="bg-card">
                     <div class="card" style="border-radius: 18px; margin-bottom: 2.5cm;">
                         <div class="mb-3 question">
-                            <label class="form-label" style="font-family: Arial; font-size: 0.6cm; margin:0.3cm">Qual é o nome do famoso jogo de tabuleiro que tem versões digitais e físicas, onde você compra propriedades?</label>
+                            <label class="form-label" style="font-family: Arial; font-size: 0.6cm; margin:0.3cm">
+                                Em qual jogo clássico de tabuleiro, amplamente adaptado para o digital, os jogadores podem adquirir ativos fictícios, cobrar tarifas de outros jogadores e gerenciar recursos financeiros?
+                            </label>
                             <div style="text-align:justify; margin-left:0.5cm; font-size:0.5cm;">
-                                <input type="radio" name="r5"  value="Warcraft"> Warcraft<br>
-                                <input type="radio" name="r5"  value="Monopoly"> Monopoly<br>
-                                <input type="radio" name="r5"  value="Chess"> Chess<br>
-                                <input type="radio" name="r5"  value="Clue"> Clue
+                                <input type="radio" name="r5" value="Catan"> Catan<br>
+                                <input type="radio" name="r5" value="Monopoly"> Monopoly<br>
+                                <input type="radio" name="r5" value="Risk"> Risk<br>
+                                <input type="radio" name="r5" value="The Game of Life"> The Game of Life<br>
                             </div>
                         </div>
                     </div>
@@ -183,12 +215,14 @@
                 <div class="bg-card">
                     <div class="card" style="border-radius: 18px; margin-bottom: 2.5cm;">
                         <div class="mb-3 question">
-                            <label class="form-label" style="font-family: Arial; font-size: 0.6cm; margin:0.3cm">Quem é o protagonista da série "The Legend of Zelda"?</label>
+                            <label class="form-label" style="font-family: Arial; font-size: 0.6cm; margin:0.3cm">
+                                Na famosa série de fantasia que explora um reino lendário, qual personagem é conhecido por carregar uma espada sagrada e enfrentar uma entidade sombria repetidamente?
+                            </label>
                             <div style="text-align:justify; margin-left:0.5cm; font-size:0.5cm;">
-                                <input type="radio" name="r6"  value="Zelda"> Zelda<br>
-                                <input type="radio" name="r6"  value="Link"> Link<br>
-                                <input type="radio" name="r6"  value="Ganondorf"> Ganondorf<br>
-                                <input type="radio" name="r6"  value="Mario"> Mario
+                                <input type="radio" name="r6" value="Eldrick"> Eldrick<br>
+                                <input type="radio" name="r6" value="Zelda"> Zelda<br>
+                                <input type="radio" name="r6" value="Ganondorf"> Ganondorf<br>
+                                <input type="radio" name="r6" value="Link"> Link<br>
                             </div>
                         </div>
                     </div>
@@ -225,12 +259,14 @@
                 <div class="bg-card">
                     <div class="card" style="border-radius: 18px; margin-bottom: 2.5cm;">
                         <div class="mb-3 question">
-                            <label class="form-label" style="font-family: Arial; font-size: 0.6cm; margin:0.3cm">Qual é o nome do famoso jogo de sobrevivência em que você deve coletar recursos e construir abrigos?</label>
+                            <label class="form-label" style="font-family: Arial; font-size: 0.6cm; margin:0.3cm">
+                                Em qual jogo de sobrevivência, ambientado em um mundo sombrio e imprevisível, o jogador enfrenta criaturas hostis e gerencia sua sanidade enquanto coleta recursos para enfrentar desafios naturais?
+                            </label>
                             <div style="text-align:justify; margin-left:0.5cm; font-size:0.5cm;">
-                                <input type="radio" name="r9"  value="Rust"> Rust<br>
-                                <input type="radio" name="r9"  value="Minecraft"> Minecraft<br>
-                                <input type="radio" name="r9"  value="ARK: Survival Evolved"> ARK: Survival Evolved<br>
-                                <input type="radio" name="r9"  value="Don't Starve"> Don't Starve
+                                <input type="radio" name="r9" value="The Forest"> The Forest<br>
+                                <input type="radio" name="r9" value="Darkwood"> Darkwood<br>
+                                <input type="radio" name="r9" value="Don't Starve"> Don't Starve<br>
+                                <input type="radio" name="r9" value="Green Hell"> Green Hell<br>
                             </div>
                         </div>
                     </div>
@@ -239,12 +275,14 @@
                 <div class="bg-card">
                     <div class="card" style="border-radius: 18px; margin-bottom: 2.5cm;">
                         <div class="mb-3 question">
-                            <label class="form-label" style="font-family: Arial; font-size: 0.6cm; margin:0.3cm">Qual é o jogo de corrida famoso que tem um sistema de física realista e permite personalização de carros?</label>
+                            <label class="form-label" style="font-family: Arial; font-size: 0.6cm; margin:0.3cm">
+                                Em qual jogo de simulação automobilística renomado os jogadores podem experimentar física de direção precisa, com foco em provas de circuito e veículos licenciados com múltiplas opções de ajuste?
+                            </label>
                             <div style="text-align:justify; margin-left:0.5cm; font-size:0.5cm;">
-                                <input type="radio" name="r10"  value="Gran Turismo">Gran Turismo<br>
-                                <input type="radio" name="r10"  value="Forza Horizon"> Forza Horizon<br>
-                                <input type="radio" name="r10"  value="Need for Speed"> Need for Speed<br>
-                                <input type="radio" name="r10"  value="Burnout"> Burnout
+                                <input type="radio" name="r10" value="Assetto Corsa"> Assetto Corsa<br>
+                                <input type="radio" name="r10" value="Gran Turismo"> Gran Turismo<br>
+                                <input type="radio" name="r10" value="Project CARS"> Project CARS<br>
+                                <input type="radio" name="r10" value="F1 2022"> F1 2022<br>
                             </div>
                         </div>
                     </div>
@@ -305,13 +343,13 @@
                 "Minecraft", // r0
                 "Mario",     // r1
                 "Fortnite",  // r2
-                "Pokémon",   // r3
+                "Pocket Monsters",   // r3
                 "Minecraft", // r4
                 "Monopoly",  // r5
                 "Link",      // r6
                 "GTA V",     // r7
                 "Hearthstone", // r8
-                "Minecraft", // r9
+                "Don't Starve", // r9
                 "Gran Turismo" // r10
             ];
 

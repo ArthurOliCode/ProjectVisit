@@ -3,74 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Página Inicial</title>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="img/IconPage.png">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="qmvc.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>ProjectVs</title>
 </head>
 
-<body class="gradient-bg">
+<body class="gradient-bgIndex">
     <br>
     <br>
     <br>
     <br>
     <div class="container text-center">
         <div class="row">
-            <div class="col-12"><h1 class="display-3">Home</h1></div>
+            <div class="col-12"><h1 class="display-3">Bem-vindo</h1></div>
         </div>
     </div>
 
 
-    <nav id="navbar-AdivImg" class="navbar navbar-dark bg-dark fixed-top" data-bs-theme="black">
-        <div class="container-fluid">
-            <nav class="navbar bg-body-tertiary bg-dark fixed-top" data-bs-theme="dark">
-                <button class="navbar-toggler animated-Button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon animated-hamburguer"></span>
-                </button>
-                <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
-                    <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasMenuLabel"><a class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="Index4B.html">
-                            <img src="img/houseIcon.png" class="rounded float-start" style="margin-top: 0.25cm; margin-right: 0.5cm;" alt="..." width="20" >Menu de Jogos
+    <style>
+        /* CSS para controlar a exibição dos itens com base na altura da tela */
+        @media (min-height: 800px) {
+            .nav-item.dropdown {
+                display: none;
+            }
+            .nav-item.game-item {
+                display: block;
+            }
+        }
+    
+        @media (max-height: 799px) {
+            .nav-item.dropdown {
+                display: block;
+            }
+            .nav-item.game-item {
+                display: none;
+            }
+        }
+    </style>
+    
+    <div class="container-fluid">
+        <nav class="navbar bg-body-tertiary bg-dark fixed-top shadow-NavBar" data-bs-theme="dark">
+            <button class="navbar-toggler animated-Button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon animated-hamburguer"></span>
+            </button>
+            <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasMenuLabel">
+                        <a class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" style="font-size: x-large;">
+                            <img src="img/houseIcon.png" class="rounded float-start" style="margin-top: 0.25cm; margin-right: 0.5cm;" alt="..." width="20">Menu de Jogos
                         </a></h5>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <div>
-                            Aqui estão alguns jogos para que você aprenda se divertindo!!!
-                        </div>
-
-                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Lista de Jogos
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-dark">
-                                    <li><h6 class="dropdown-header">Adivinhação</h6></li>
-                                    <li><a class="dropdown-item" href="AdivImg.html">Imagens</a></li>
-                                    <li><a class="dropdown-item" href="AdivNum.html">Números</a></li>
-                                    <li><a class="dropdown-item" href="LevelsNum.html">Torre de desafios</a></li>
-                                    <li><hr class="dropdown-divider"></li>
-                                    <li><h6 class="dropdown-header">Quizz</a></li>
-                                    <li><a class="dropdown-item" href="quizz.html">Quizz</a></li>
-                                    <li><hr class="dropdown-divider"></li>
-                                    <li><h6 class="dropdown-header">Tibet</h6></li>
-                                    <li><a class="dropdown-item" href="#">Teste Tibet</a></li>
-                                    <li><hr class="dropdown-divider"></li>
-                                    <li><h6 class="dropdown-header">Jogo Livre</h6></li>
-                                    <li><a class="dropdown-item" href="#">Jogo</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-            </nav>
-        </div>
-    </nav>
+                <div class="offcanvas-body">
+                    <div style="font-size: larger; margin: 5%;">Aqui estão alguns jogos para que você aprenda se divertindo!!!</div>
+    
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <!-- Dropdown visível em telas menores -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Lista de Jogos
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <!-- Itens dentro do dropdown -->
+                                <li><h6 class="dropdown-header">Adivinhação</h6></li>
+                                <li><a class="dropdown-item" href="AdivImg.html">Imagens</a></li>
+                                <li><a class="dropdown-item" href="AdivNum.html">Números</a></li>
+                                <li><a class="dropdown-item" href="LevelsNum.html">Torre de desafios</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><h6 class="dropdown-header">Quizz</h6></li>
+                                <li><a class="dropdown-item" href="quizz.html">Conhecimentos gerais</a></li>
+                                <li><a class="dropdown-item" href="qmvc.html">Seu quizz</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><h6 class="dropdown-header">Tibet</h6></li>
+                                <li><a class="dropdown-item" href="#">Teste Tibet</a></li>
+                            </ul>
+                        </li>
+                        <div style="margin-left: 5%; margin-top: 5%; font-size: larger;">
+                            <!-- Itens individuais visíveis em telas maiores -->
+                            <li class="nav-item game-item"><a class="nav-link" href="AdivImg.html">Imagens</a></li>
+                            <li class="nav-item game-item"><a class="nav-link" href="AdivNum.html">Números</a></li>
+                            <li class="nav-item game-item"><a class="nav-link" href="LevelsNum.html">Torre de desafios</a></li>
+                            <li class="nav-item game-item"><a class="nav-link" href="quizz.html">Conhecimentos gerais</a></li>
+                            <li class="nav-item game-item"><a class="nav-link" href="qmvc.html">Seu quizz</a></li>
+                            <li class="nav-item game-item"><a class="nav-link" href="#">Teste Tibet</a></li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
     
 
     <div class="main">
-        
+        <div class="container" style="align-content: center;">
+            <div class="row">
+                <div class="col-12">
+                    <p class="" style="text-align: justify; max-width: 20cm; margin-left: 9cm; margin-top: 10%; font-family:Arial; font-size: large; margin-bottom: 3cm;">
+                        Conheça jogos difentes, saiba sobre suas histórias, se divirta aprendendo</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div id="CarouselIndex" class="carousel slide shadowCarousel" data-bs-ride="carousel" style="width: 800px; margin-left: 6cm; margin-bottom: 3cm;">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img/screenshot/Screenshot 1.png" alt="Imagem de ilustração do jogo Adivinha Imagens" width="795px" style="margin-left: 0.5%;">
+                            </div>
+                            <div class="carousel-item">
+                                <div class="card" style="width: 20.6cm;">
+                                    <img src="img/screenshot/Screenshot 2.png" alt="Imagem de ilustração do jogo Adivinha Imagens" width="822px" style="margin-left: 0.5%;">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="card" style="width: 20.6cm;">
+                                    <img src="img/screenshot/Screenshot 3.png" alt="Imagem de ilustração do jogo Adivinha Imagens" width="826px" style="margin-left: 0.5%;">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="card" style="width: 20.6cm;">
+                                    <img src="img/screenshot/Screenshot 4.png" alt="Imagem de ilustração do jogo Adivinha Imagens" width="800px" style="margin-left: 0.5%;">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="card" style="width: 20.6cm;">
+                                    <img src="img/screenshot/Screenshot 5.png" alt="Imagem de ilustração do jogo Adivinha Imagens" width="840px" style="margin-left: 0.5%;">
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#CarouselIndex" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true" data-bs-slide="next">
+                            </span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#CarouselIndex" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true" data-bs-slide="prev">
+                            </span>
+                            <span class="visually-hidden">Próximo</span>
+                        </button>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                            <p  style="text-align: justify; max-width: 20cm; margin-left: 6.5cm; font-family:Arial; font-size: large; margin-bottom: 3cm;">
+                                Esses são exemplos de alguns jogos que temos, experimente e aproveite o que eles têm a ofertar.
+                                Explore os diversos universos de jogos, teste seu conhecimento sobre eles, identifiique em qual
+                                deles você preferiria estar. 
+                            </p>
+                    </div>
+                </div>
+        </div>
+
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>

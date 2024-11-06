@@ -1,4 +1,37 @@
-.gradient-bg{
+.gradient-bgIndex{
     background: linear-gradient(90deg, rgb(5, 0, 1), rgb(0, 26, 59));
     color: whitesmoke;
+}
+
+.shadow-NavBar{
+    position:relative;
+    padding: 4px;
+    border-radius: 15px;
+    background-color: black;
+    animation: shadow 8s ease infinite;
+    box-shadow: 
+                0px 0px 20px black,   
+                0px 0px 30px rgb(53, 53, 53),
+                0px 0px 40px rgb(90, 90, 90);
+}
+
+@keyframes shadow{
+    0% {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.795), 
+                    0 0 30px rgba(70, 70, 70, 0.5), 
+                    0 0 40px rgba(155, 155, 155, 0.24),
+                    0 0 50px rgba(245, 245, 245, 0.1);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.801), 
+                    0 0 60px rgba(70, 70, 70, 0.5), 
+                    0 0 7px rgba(155, 155, 155, 0.425),
+                    0 0 80px rgba(255, 255, 255, 0.1);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.822), 
+                    0 0 30px rgba(63, 63, 63, 0.568), 
+                    0 0 40px rgba(155, 155, 155, 0.219),
+                    0 0 50px rgba(255, 251, 251, 0.1);
+    }
 }

@@ -5,100 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="AdivImg.css">
     <link rel="stylesheet" href="LevelsNum.css">
+    <link rel="stylesheet" href="Index.css">
+    <link rel="icon" href="img/IconPage.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <title>Num guest</title>
+    <title>ProjectVs</title>
 </head>
 <body class="gradientBodyNum">
-        <div class="container-fluid">
-            <nav class="navbar bg-body-tertiary bg-dark fixed-top" data-bs-theme="dark">
-                <button class="navbar-toggler animated-Button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon animated-hamburguer"></span>
-                </button>
-                <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
-                    <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasMenuLabel"><a class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="Index4B.html">
-                            <img src="img/houseIcon.png" class="rounded float-start" style="margin-top: 0.25cm; margin-right: 0.5cm;" alt="..." width="20" >Menu de Jogos
-                        </a></h5>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <div>
-                            Aqui estão alguns jogos para que você aprenda se divertindo!!!
-                        </div>
-
-                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Lista de Jogos
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-dark">
-                                    <li><h6 class="dropdown-header">Adivinhação</h6></li>
-                                    <li><a class="dropdown-item" href="AdivImg.html">Imagens</a></li>
-                                    <li><a class="dropdown-item" href="AdivNum.html">Números</a></li>
-                                    <li><a class="dropdown-item" href="LevelsNum.html">Torre de desafios</a></li>
-                                    <li><hr class="dropdown-divider"></li>
-                                    <li><h6 class="dropdown-header">Quizz</a></li>
-                                    <li><a class="dropdown-item" href="quizz.html">Quizz</a></li>
-                                    <li><hr class="dropdown-divider"></li>
-                                    <li><h6 class="dropdown-header">Tibet</h6></li>
-                                    <li><a class="dropdown-item" href="#">Teste Tibet</a></li>
-                                    <li><hr class="dropdown-divider"></li>
-                                    <li><h6 class="dropdown-header">Jogo Livre</h6></li>
-                                    <li><a class="dropdown-item" href="#">Jogo</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
+    <style>
+        /* CSS para controlar a exibição dos itens com base na altura da tela */
+        @media (min-height: 800px) {
+            .nav-item.dropdown {
+                display: none;
+            }
+            .nav-item.game-item {
+                display: block;
+            }
+        }
+    
+        @media (max-height: 799px) {
+            .nav-item.dropdown {
+                display: block;
+            }
+            .nav-item.game-item {
+                display: none;
+            }
+        }
+    </style>
+    
+    <div class="container-fluid">
+        <nav class="navbar bg-body-tertiary bg-dark fixed-top shadow-NavBar" data-bs-theme="dark">
+            <button class="navbar-toggler animated-Button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon animated-hamburguer"></span>
+            </button>
+            <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasMenuLabel">
+                        <a class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="Index4B.html" style="font-size: x-large;">
+                            <img src="img/houseIcon.png" class="rounded float-start" style="margin-top: 0.25cm; margin-right: 0.5cm;" alt="..." width="20">Menu de Jogos
+                        </a>
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-            </nav>
-        </div>
-        <nav class="navbar navbar-dark bg-dark fixed-top" data-bs-theme="black">
-            <div class="container-fluid">
-                    <nav class="navbar bg-body-tertiary bg-dark fixed-top" data-bs-theme="dark">
-                            <button class="navbar-toggler animated-Button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon animated-hamburguer"></span>
-                            </button>
-                            <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
-                                <div class="offcanvas-header">
-                                    <h5 class="offcanvas-title" id="offcanvasMenuLabel"><a class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="Index4B.html">Menu de Jogos</a></h5>
-                                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                                </div>
-                                <div class="offcanvas-body">
-                                    <div>
-                                        Aqui estão alguns jogos para que você aprenda se divertindo!!!
-                                    </div>
+                <div class="offcanvas-body">
+                    <div style="font-size: larger; margin: 5%;">Aqui estão alguns jogos para que você aprenda se divertindo!!!</div>
+    
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <!-- Dropdown visível em telas menores -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Lista de Jogos
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <!-- Itens dentro do dropdown -->
+                                <li><h6 class="dropdown-header">Adivinhação</h6></li>
+                                <li><a class="dropdown-item" href="AdivImg.html">Imagens</a></li>
+                                <li><a class="dropdown-item" href="AdivNum.html">Números</a></li>
+                                <li><a class="dropdown-item" href="LevelsNum.html">Torre de desafios</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><h6 class="dropdown-header">Quizz</h6></li>
+                                <li><a class="dropdown-item" href="quizz.html">Conhecimentos gerais</a></li>
+                                <li><a class="dropdown-item" href="qmvc.html">Seu quizz</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><h6 class="dropdown-header">Tibet</h6></li>
+                                <li><a class="dropdown-item" href="#">Teste Tibet</a></li>
 
-                                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                                        <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                Lista de Jogos
-                                            </a>
-                                            <ul class="dropdown-menu dropdown-menu-dark">
-                                                <li><h6 class="dropdown-header">Adivinhação</h6></li>
-                                                <li><a class="dropdown-item" href="AdivImg.html">Imagens</a></li>
-                                                <li><a class="dropdown-item" href="AdivNum.html">Números</a></li>
-                                                <li><hr class="dropdown-divider"></li>
-                                                <li><h6 class="dropdown-header">Quizz</h6></li>
-                                                <li><a class="dropdown-item" href="quizz.html">Quizz</a></li>
-                                                <li><hr class="dropdown-divider"></li>
-                                                <li><h6 class="dropdown-header">Tibet</h6></li>
-                                                <li><a class="dropdown-item" href="#">Teste Tibet</a></li>
-                                                <li><hr class="dropdown-divider"></li>
-                                                <li><h6 class="dropdown-header">Jogo Livre</h6></li>
-                                                <li><a class="dropdown-item" href="#">Jogo</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                    </nav>
+                            </ul>
+                        </li>
+                        <div style="margin-left: 5%; margin-top: 5%; font-size: larger;">
+                            <!-- Itens individuais visíveis em telas maiores -->
+                            <li class="nav-item game-item"><a class="nav-link" href="AdivImg.html">Imagens</a></li>
+                            <li class="nav-item game-item"><a class="nav-link" href="AdivNum.html">Números</a></li>
+                            <li class="nav-item game-item"><a class="nav-link" href="LevelsNum.html">Torre de desafios</a></li>
+                            <li class="nav-item game-item"><a class="nav-link" href="quizz.html">Conhecimentos gerais</a></li>
+                            <li class="nav-item game-item"><a class="nav-link" href="qmvc.html">Seu quizz</a></li>
+                            <li class="nav-item game-item"><a class="nav-link" href="#">Teste Tibet</a></li>
+
+                        </div>
+                    </ul>
+                </div>
             </div>
         </nav>
+    </div>
+
         <div class="main">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h4 class="display-2" style="margin-top: 2cm; margin-left: 9cm; font-family:serif;">Torre de desafios</h4>
+                        <h4 class="display-2" style="margin-top: 2cm; margin-left: 8.4cm; font-family:Arial;">Torre de desafios</h4>
                     </div>
                 </div>
             </div>
@@ -109,8 +102,8 @@
                             <div class="card-Header"><h5 class="display-6">Fácil</h5></div>
                             <div class="card-body">
                                 <p style="text-align: justify; font-size:0.4cm; margin:1cm;">Se jogue no primeiro nivel de adivinhação, você irá competir
-                                    contra uma máquina, ela pensará em um número entre 1 á 10, e
-                                    você dará seus palpites!! Se esforçe e acerte o maior número
+                                    contra uma máquina, ela pensará em um número entre 1 à 10, e
+                                    você dará seus palpites!! Se esforce e acerte o maior número
                                     de vezes possíveis!!
                                 </p>
                                 <button type="button" class="btn btn-secondary animated-Button" style="max-width:6cm; 
@@ -126,8 +119,8 @@
                             <div class="card-body">
                                 <p style="text-align: justify; font-size:0.4cm; margin:1cm;">Quer um pouco mais de desafio?! 
                                     Seja um adivinho nível dois! Você irá competir
-                                    contra uma máquina, ela pensará em um número entre 1 á 50, e
-                                    você dará seus palpites!! Se esforçe e acerte o maior número
+                                contra uma máquina, ela pensará em um número entre 1 à 50, e
+                                    você dará seus palpites!! Se esforce e acerte o maior número
                                     de vezes possíveis!!
                                 </p>
                                 <button type="button" class="btn btn-secondary animated-Button" style="max-width:6cm; 
@@ -143,7 +136,7 @@
                             <div class="card-body">
                                 <p style="text-align: justify; font-size:0.4cm; margin:1cm;">
                                     Você se acha o mestre dos magos 🐦‍⬛?! Então tente a sorte! Você irá competir
-                                    contra uma máquina, ela pensará em um número de 1 á 100, e você dará seus palpites!!
+                                    contra uma máquina, ela pensará em um número de 1 à 100, e você dará seus palpites!!
                                     Mas será que você conseguirá acertar??
                                 </p>
                                 <button type="button" class="btn btn-secondary animated-Button" style="max-width:6cm; 
