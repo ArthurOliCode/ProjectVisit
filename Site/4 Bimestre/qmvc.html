@@ -25,6 +25,12 @@
                 display: block;
             }
         }
+        /* Aumentar o espaçamento entre itens em telas grandes */
+        @media (min-width: 992px) {
+            .navbar-nav {
+                gap: 60px; /* Define a distância entre os itens */
+            }
+        }
     
         @media (max-height: 799px) {
             .nav-item.dropdown {
@@ -33,6 +39,33 @@
             .nav-item.game-item {
                 display: none;
             }
+
+        }
+       /* Exibir offcanvas em telas pequenas */
+       @media (max-width: 991px) {
+            .navbar-collapse {
+                display: none !important; /* Oculta a navbar para telas menores */
+            }
+            .offcanvas {
+                display: block !important;
+            }
+            .navbar-toggler {
+                display: block; /* Exibe o botão do menu */
+            }
+            .intro-text {
+                display: block; /* Exibe o texto de introdução */
+            }
+        }
+
+        /* Ocultar o texto de introdução em telas maiores */
+        .intro-text {
+            display: none;
+        }
+
+        /* Navbar fixa para impedir que ocupe mais do que o necessário */
+        .navbar {
+            max-width: 100%;
+            overflow: hidden; /* Impede que a navbar expanda demais */
         }
     </style>
     

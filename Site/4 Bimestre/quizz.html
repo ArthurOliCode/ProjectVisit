@@ -21,13 +21,19 @@
         .question {
             margin: 20px 0;
         }
-         /* CSS para controlar a exibição dos itens com base na altura da tela */
-         @media (min-height: 800px) {
+        /* CSS para controlar a exibição dos itens com base na altura da tela */
+        @media (min-height: 800px) {
             .nav-item.dropdown {
                 display: none;
             }
             .nav-item.game-item {
                 display: block;
+            }
+        }
+        /* Aumentar o espaçamento entre itens em telas grandes */
+        @media (min-width: 992px) {
+            .navbar-nav {
+                gap: 60px; /* Define a distância entre os itens */
             }
         }
     
@@ -38,9 +44,38 @@
             .nav-item.game-item {
                 display: none;
             }
+
+        }
+       /* Exibir offcanvas em telas pequenas */
+       @media (max-width: 991px) {
+            .navbar-collapse {
+                display: none !important; /* Oculta a navbar para telas menores */
+            }
+            .offcanvas {
+                display: block !important;
+            }
+            .navbar-toggler {
+                display: block; /* Exibe o botão do menu */
+            }
+            .intro-text {
+                display: block; /* Exibe o texto de introdução */
+            }
+        }
+
+        /* Ocultar o texto de introdução em telas maiores */
+        .intro-text {
+            display: none;
+        }
+
+        /* Navbar fixa para impedir que ocupe mais do que o necessário */
+        .navbar {
+            max-width: 100%;
+            overflow: hidden; /* Impede que a navbar expanda demais */
         }
     </style>
+
 </head>
+
 <body class="Bgcolor">
     <nav id="navbar-AdivImg" class="navbar navbar-dark bg-dark fixed-top" data-bs-theme="black">
         <div class="container-fluid">
@@ -64,7 +99,7 @@
                         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">
-                        <div style="font-size: larger; margin: 5%;">Aqui estão alguns jogos para que você aprenda se divertindo!!!</div>
+                        <div class="intro-text" style="font-size: larger; margin: 5%;">Aqui estão alguns jogos para que você aprenda se divertindo!!!</div> 
 
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                             <li class="nav-item dropdown">
