@@ -24,3 +24,9 @@
     transform:scale(1);
     transition-duration: 1s;
 }
+
+@media(min-width: 1024px) and (max-width: 1024px){
+    .navbar-nav {
+        gap: 20px; /* Define a distância entre os itens */
+    }
+}

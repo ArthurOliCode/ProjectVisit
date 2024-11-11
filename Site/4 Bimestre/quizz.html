@@ -1,42 +1,167 @@
 <!DOCTYPE html>
 <html lang="pt-br" data-bs-theme="dark">
 <head>
+
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
     <link rel="icon" href="img/IconGame1.png">
     <link rel="stylesheet" href="Index.css">
     <link rel="stylesheet" href="quizz.css">
-
     <link rel="stylesheet" href="AdivImg.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
     <title>ProjectVs</title>
+
+
     <style>
+
+
         body {
             color: #f8f9fa;
         }
+
+
         .Bgcolor {
             background: linear-gradient(50deg, rgb(119, 119, 119), black);
         }
+
+
         .question {
             margin: 20px 0;
         }
+
+
         /* CSS para controlar a exibição dos itens com base na altura da tela */
-        @media (min-height: 800px) {
+        @media (min-width: 800px) {
             .nav-item.dropdown {
                 display: none;
             }
             .nav-item.game-item {
                 display: block;
             }
+           
         }
+
+
+        /* Navbar estilos*/
+        .navbar-nav{
+            flex-direction: row; /* Itens em linha horizontal*/
+        }
+
+
+        /* CSS para controlar a exiibição dos itens com base na altura da tela */
+        @media(min-width: 1024px){
+            .nav-item.dropdown{
+                display: none;
+            }
+            .nav-item.game-item{
+                display: block;
+            }
+        }
+
+
+        /* Diminui o tamanho da fonte em telas menores */
+        @media (max-width: 991px) and (min-width: 767px){
+           div{
+                font-size: 12px;
+           }
+           div.p{
+                margin: 8%;
+           }
+            .titulo{
+                font-size: x-large;
+            }
+            .bg-card{
+                transform: scale(0.8);
+            }
+            .bg-card:hover{
+                transform: scale(0.87);
+            }
+            .sub-Titulo{
+                font-size: larger;
+            }
+            input{
+                font-size: x-small;
+            }
+        }
+
+
+        @media(min-width:319px) and (max-width: 765px){
+            div{
+                font-size: 10px;
+            }
+            .titulo{
+                font-size: large;
+            }
+            input{
+                transform: scale(0.7);
+                font-size: 10px;
+            }
+        }
+
+
+        @media(max-width: 320px){
+            .inicio{
+                margin-top: -200%
+            }
+        }
+
+
+        @media(max-width: 375px) and (min-width: 321px){
+            .inicio{
+                margin-top: -170%
+            }
+        }
+
+
+        @media(max-width: 425px) and (min-width: 376px){
+            .inicio{
+                margin-top: -150%
+            }
+        }
+
+
+        @media(min-width: 768px) and (max-width: 1023px) {
+            .inicio{
+                margin-top: -80%
+            }
+        }
+
+
+        @media(min-width: 1024px) and (max-width:1439px) {
+            .inicio{
+                margin-top: -50%
+            }
+        }
+
+
+        @media(min-width: 1440px){
+            .inicio{
+                margin-top: -30%
+            }
+        }
+        
+
         /* Aumentar o espaçamento entre itens em telas grandes */
         @media (min-width: 992px) {
             .navbar-nav {
                 gap: 60px; /* Define a distância entre os itens */
+                margin-left: 10%;
+            }
+            .intro-text{
+                display: none; /* Ocultar o texto de introdução em telas maiores */
+            }
+            p{
+                font-size: large;/*Aumentar tamanho da fonte em telas maiores*/
             }
         }
     
+
         @media (max-height: 799px) {
             .nav-item.dropdown {
                 display: block;
@@ -44,12 +169,13 @@
             .nav-item.game-item {
                 display: none;
             }
-
         }
+
+
        /* Exibir offcanvas em telas pequenas */
        @media (max-width: 991px) {
             .navbar-collapse {
-                display: none !important; /* Oculta a navbar para telas menores */
+                display: none; /* Oculta a navbar para telas menores */
             }
             .offcanvas {
                 display: block !important;
@@ -59,19 +185,23 @@
             }
             .intro-text {
                 display: block; /* Exibe o texto de introdução */
+                font-size: larger;
+                margin: 5%;
             }
         }
 
-        /* Ocultar o texto de introdução em telas maiores */
-        .intro-text {
-            display: none;
-        }
 
         /* Navbar fixa para impedir que ocupe mais do que o necessário */
         .navbar {
             max-width: 100%;
             overflow: hidden; /* Impede que a navbar expanda demais */
         }
+
+        .resultado{
+            margin-bottom: 30%;
+        }
+
+
     </style>
 
 </head>
@@ -79,18 +209,10 @@
 <body class="Bgcolor">
     <nav id="navbar-AdivImg" class="navbar navbar-dark bg-dark fixed-top" data-bs-theme="black">
         <div class="container-fluid">
-            <nav class="navbar bg-body-tertiary bg-dark fixed-top shadow-NavBar" data-bs-theme="dark">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark fixed-top shadow-NavBar" data-bs-theme="dark">
                 <button class="navbar-toggler animated-Button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon animated-hamburguer"></span>
                 </button>
-                <ul class="nav nav-pills" style="--bs-scroll-height: 100px;">
-                    <li class="nav-item">
-                        <a class="nav-link animated-Button link-light" href="#scrollspyHeading1">Introdução</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link animated-Button link-light" href="#scrollspyHeading2">Início</a>
-                    </li>
-                </ul>
                 <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
                     <div class="offcanvas-header">
                         <h5 class="offcanvas-title" id="offcanvasMenuLabel"><a class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="Index4B.html">
@@ -101,7 +223,7 @@
                     <div class="offcanvas-body">
                         <div class="intro-text" style="font-size: larger; margin: 5%;">Aqui estão alguns jogos para que você aprenda se divertindo!!!</div> 
 
-                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Lista de Jogos
@@ -118,50 +240,53 @@
                                     <li><hr class="dropdown-divider"></li>
                                     <li><h6 class="dropdown-header">Tibet</h6></li>
                                     <li><a class="dropdown-item" href="#">Teste Tibet</a></li>
-
-
                                 </ul>
                             </li>
-                            <div style="margin-left: 5%; margin-top: 5%; font-size: larger;">
-                                <!-- Itens individuais visíveis em telas maiores -->
-                                <li class="nav-item game-item"><a class="nav-link" href="AdivImg.html">Imagens</a></li>
-                                <li class="nav-item game-item"><a class="nav-link" href="AdivNum.html">Números</a></li>
-                                <li class="nav-item game-item"><a class="nav-link" href="LevelsNum.html">Torre de desafios</a></li>
-                                <li class="nav-item game-item"><a class="nav-link" href="quizz.html">Conhecimentos gerais</a></li>
-                                <li class="nav-item game-item"><a class="nav-link" href="qmvc.html">Seu quizz</a></li>
-                                <li class="nav-item game-item"><a class="nav-link" href="Tibet.html">Teste Tibet</a></li>
-                            </div>
+                        </ul>
+                    </div>
+                    <div class="collapse navbar-collapse">
+                        <!-- Itens individuais visíveis em telas maiores -->
+                        <ul class="navbar-nav">
+                            <li class="nav-item game-item"><a class="nav-link" href="AdivImg.html">Imagens</a></li>
+                            <li class="nav-item game-item"><a class="nav-link" href="AdivNum.html">Números</a></li>
+                            <li class="nav-item game-item"><a class="nav-link" href="LevelsNum.html">Torre de desafios</a></li>
+                            <li class="nav-item game-item"><a class="nav-link" href="quizz.html">Conhecimentos gerais</a></li>
+                            <li class="nav-item game-item"><a class="nav-link" href="qmvc.html">Seu quizz</a></li>
+                            <li class="nav-item game-item"><a class="nav-link" href="Tibet.html">Teste Tibet</a></li>
+                            <ul class="nav nav-pills" style="--bs-scroll-height: 100px;">
+                                <li class="nav-item"><a class="nav-link animated-Button link-light" href="#scrollspyHeading1">Introdução</a></li>
+                                <li class="nav-item"><a class="nav-link animated-Button link-light" href="#scrollspyHeading2">Início</a></li>
+                            </ul>
                         </ul>
                     </div>
                 </div>
             </nav>
         </div>
     </nav>
+
+
     <div class="container mt-5 pt-3">
-        <div>
-
-
             <div style="text-align: center;">
                 <div class="spark-container">
-                    <h2 class="display-3" style="margin: 3cm; margin-bottom: 8cm; font-family: Arial;">Teste seus conhecimentos sobre jogos</h2>
-                    <h4 class="display-5" style="margin: 2cm;margin-top:0cm;font-family: Arial;" id="scrollspyHeading1">introdução</h4>
-                    <p style="text-align: justify; font-size:x-large;">Este é um jogo desenvolvido para que você teste alguns de seus  conhecimentos sobre jogos,
+                    <h2 class="display-3 titulo" style="margin: 3cm; margin-bottom: 30%; font-family: Arial;">Teste seus conhecimentos sobre jogos</h2>
+                    <h4 class="display-5 titulo" style="margin: 2cm;margin-top:0cm;font-family: Arial;" id="scrollspyHeading1">introdução</h4>
+                    <p style="text-align: justify;">Este é um jogo desenvolvido para que você teste alguns de seus  conhecimentos sobre jogos,
                         para cada pergunta, marque a alternativa correta, e ao final, verifique se você realmente conhece essas obras!!
                     </p>
                 </div>
             </div>
 
-            <div style="text-align: center;">
+
+            <div class="inicio" style="text-align: center;">
                 <h4 class="display-5" style="margin: 3cm; margin-bottom: 0cm; font-family: Arial;" id="scrollspyHeading2">Início</h4>
             </div>
-
 
             <form name="formQuizz" class="mt-4">
                 <div class="bg-card">
                     <div class="card" style="border-radius: 18px; margin-bottom: 2.5cm;">
                         <div class="mb-3">
-                            <label class="form-label" style=" font-size: 0.6cm; margin:0.3cm">Qual é o jogo mais vendido de todos os tempos?</label>
-                        <div style="text-align:justify; margin-left:0.5cm; font-size:0.5cm;">
+                            <label class="form-label sub-Titulo" style="margin:0.3cm">Qual é o jogo mais vendido de todos os tempos?</label>
+                        <div style="text-align:justify; margin-left:0.5cm;">
                                 <input type="radio" name="r0"  value="Tetris"> Tetris<br>
                                 <input type="radio" name="r0"  value="Minecraft"> Minecraft<br>
                                 <input type="radio" name="r0"  value="Grand Theft Auto V"> Grand Theft Auto V<br>
@@ -174,8 +299,8 @@
                 <div class="bg-card">
                     <div class="card" style="border-radius: 18px; margin-bottom: 2.5cm;">
                         <div class="mb-3">
-                            <label class="form-label" style="font-family: Arial; font-size: 0.6cm; margin:0.3cm">Qual personagem é conhecido como o encanador mais famoso?</label>
-                            <div style="text-align:justify; margin-left:0.5cm; font-size:0.5cm;">
+                            <label class="form-label sub-Titulo" style="font-family: Arial;margin:0.3cm">Qual personagem é conhecido como o encanador mais famoso?</label>
+                            <div style="text-align:justify; margin-left:0.5cm;">
                                 <input type="radio" name="r1"  value="Sonic"> Sonic<br>
                                 <input type="radio" name="r1"  value="Mario"> Mario<br>
                                 <input type="radio" name="r1"  value="Link"> Link<br>
@@ -188,8 +313,8 @@
                 <div class="bg-card">
                     <div class="card" style="border-radius: 18px; margin-bottom: 2.5cm;">
                         <div class="mb-3 question">
-                            <label class="form-label" style="font-family: Arial; font-size: 0.6cm; margin:0.3cm">Qual jogo popular é conhecido por seu modo Battle Royale?</label>
-                            <div style="text-align:justify; margin-left:0.5cm; font-size:0.5cm;">
+                            <label class="form-label sub-Titulo" style="font-family: Arial;margin:0.3cm">Qual jogo popular é conhecido por seu modo Battle Royale?</label>
+                            <div style="text-align:justify; margin-left:0.5cm;">
                                 <input type="radio" name="r2"  value="Fortnite"> Fortnite<br>
                                 <input type="radio" name="r2"  value="The Legend of Zelda"> The Legend of Zelda<br>
                                 <input type="radio" name="r2"  value="The Sims"> The Sims<br>
@@ -202,10 +327,10 @@
                 <div class="bg-card">
                     <div class="card" style="border-radius: 18px; margin-bottom: 2.5cm;">
                         <div class="mb-3 question"> 
-                            <label class="form-label" style="font-family: Arial; font-size: 0.6cm; margin:0.3cm">
+                            <label class="form-label sub-Titulo" style="font-family: Arial;margin:0.3cm">
                                 Qual destas franquias, lançada originalmente no Japão, envolve capturar criaturas para treiná-las e colocá-las em batalhas, sendo conhecida pelo slogan "Gotta Catch 'Em All"?
                             </label>
-                            <div style="text-align:justify; margin-left:0.5cm; font-size:0.5cm;">
+                            <div style="text-align:justify; margin-left:0.5cm;">
                                 <input type="radio" name="r3" value="Pocket Monsters"> Pocket Monsters<br>
                                 <input type="radio" name="r3" value="Monster Tamers"> Monster Tamers<br>
                                 <input type="radio" name="r3" value="Creature Collectors"> Creature Collectors<br>
@@ -218,10 +343,10 @@
                 <div class="bg-card">
                     <div class="card" style="border-radius: 18px; margin-bottom: 2.5cm;">
                         <div class="mb-3 question">
-                            <label class="form-label" style="font-family: Arial; font-size: 0.6cm; margin:0.3cm">
+                            <label class="form-label sub-Titulo" style="font-family: Arial;margin:0.3cm">
                                 Qual dessas plataformas permite aos jogadores alterar e manipular um ambiente virtual composto por unidades cúbicas, promovendo tanto a criação quanto a modificação livre de estruturas?
                             </label>
-                            <div style="text-align:justify; margin-left:0.5cm; font-size:0.5cm;">
+                            <div style="text-align:justify; margin-left:0.5cm;">
                                 <input type="radio" name="r4" value="Roblox"> Roblox<br>
                                 <input type="radio" name="r4" value="Terraria"> Terraria<br>
                                 <input type="radio" name="r4" value="Minecraft"> Minecraft<br>
@@ -234,10 +359,10 @@
                 <div class="bg-card">
                     <div class="card" style="border-radius: 18px; margin-bottom: 2.5cm;">
                         <div class="mb-3 question">
-                            <label class="form-label" style="font-family: Arial; font-size: 0.6cm; margin:0.3cm">
+                            <label class="form-label sub-Titulo" style="font-family: Arial;margin:0.3cm">
                                 Em qual jogo clássico de tabuleiro, amplamente adaptado para o digital, os jogadores podem adquirir ativos fictícios, cobrar tarifas de outros jogadores e gerenciar recursos financeiros?
                             </label>
-                            <div style="text-align:justify; margin-left:0.5cm; font-size:0.5cm;">
+                            <div style="text-align:justify; margin-left:0.5cm;">
                                 <input type="radio" name="r5" value="Catan"> Catan<br>
                                 <input type="radio" name="r5" value="Monopoly"> Monopoly<br>
                                 <input type="radio" name="r5" value="Risk"> Risk<br>
@@ -250,10 +375,10 @@
                 <div class="bg-card">
                     <div class="card" style="border-radius: 18px; margin-bottom: 2.5cm;">
                         <div class="mb-3 question">
-                            <label class="form-label" style="font-family: Arial; font-size: 0.6cm; margin:0.3cm">
+                            <label class="form-label sub-Titulo" style="font-family: Arial;margin:0.3cm">
                                 Na famosa série de fantasia que explora um reino lendário, qual personagem é conhecido por carregar uma espada sagrada e enfrentar uma entidade sombria repetidamente?
                             </label>
-                            <div style="text-align:justify; margin-left:0.5cm; font-size:0.5cm;">
+                            <div style="text-align:justify; margin-left:0.5cm;">
                                 <input type="radio" name="r6" value="Eldrick"> Eldrick<br>
                                 <input type="radio" name="r6" value="Zelda"> Zelda<br>
                                 <input type="radio" name="r6" value="Ganondorf"> Ganondorf<br>
@@ -266,8 +391,8 @@
                 <div class="bg-card">
                     <div class="card" style="border-radius: 18px; margin-bottom: 2.5cm;">
                         <div class="mb-3 question">
-                            <label class="form-label" style="font-family: Arial; font-size: 0.6cm; margin:0.3cm">Qual é o jogo em que você é um ladrão em um mundo aberto e pode realizar várias missões?</label>
-                            <div style="text-align:justify; margin-left:0.5cm; font-size:0.5cm;">
+                            <label class="form-label sub-Titulo" style="font-family: Arial;margin:0.3cm">Qual é o jogo em que você é um ladrão em um mundo aberto e pode realizar várias missões?</label>
+                            <div style="text-align:justify; margin-left:0.5cm;">
                                 <input type="radio" name="r7"  value="GTA V"> GTA V<br>
                                 <input type="radio" name="r7"  value="Assassin's Creed"> Assassin's Creed<br>
                                 <input type="radio" name="r7"  value="Far Cry"> Far Cry<br>
@@ -280,8 +405,8 @@
                 <div class="bg-card">
                     <div class="card" style="border-radius: 18px; margin-bottom: 2.5cm;">
                         <div class="mb-3 question">
-                            <label class="form-label" style="font-family: Arial; font-size: 0.6cm; margin:0.3cm">Qual é o nome do famoso jogo de cartas colecionáveis da Blizzard?</label>
-                            <div style="text-align:justify; margin-left:0.5cm; font-size:0.5cm;">
+                            <label class="form-label sub-Titulo" style="font-family: Arial;margin:0.3cm">Qual é o nome do famoso jogo de cartas colecionáveis da Blizzard?</label>
+                            <div style="text-align:justify; margin-left:0.5cm;">
                                 <input type="radio" name="r8"  value="Yu-Gi-Oh!"> Yu-Gi-Oh!<br>
                                 <input type="radio" name="r8"  value="Magic: The Gathering"> Magic: The Gathering<br>
                                 <input type="radio" name="r8"  value="Hearthstone"> Hearthstone<br>
@@ -294,10 +419,10 @@
                 <div class="bg-card">
                     <div class="card" style="border-radius: 18px; margin-bottom: 2.5cm;">
                         <div class="mb-3 question">
-                            <label class="form-label" style="font-family: Arial; font-size: 0.6cm; margin:0.3cm">
+                            <label class="form-label sub-Titulo" style="font-family: Arial;margin:0.3cm">
                                 Em qual jogo de sobrevivência, ambientado em um mundo sombrio e imprevisível, o jogador enfrenta criaturas hostis e gerencia sua sanidade enquanto coleta recursos para enfrentar desafios naturais?
                             </label>
-                            <div style="text-align:justify; margin-left:0.5cm; font-size:0.5cm;">
+                            <div style="text-align:justify; margin-left:0.5cm;">
                                 <input type="radio" name="r9" value="The Forest"> The Forest<br>
                                 <input type="radio" name="r9" value="Darkwood"> Darkwood<br>
                                 <input type="radio" name="r9" value="Don't Starve"> Don't Starve<br>
@@ -310,10 +435,10 @@
                 <div class="bg-card">
                     <div class="card" style="border-radius: 18px; margin-bottom: 2.5cm;">
                         <div class="mb-3 question">
-                            <label class="form-label" style="font-family: Arial; font-size: 0.6cm; margin:0.3cm">
+                            <label class="form-label sub-Titulo" style="font-family: Arial;margin:0.3cm">
                                 Em qual jogo de simulação automobilística renomado os jogadores podem experimentar física de direção precisa, com foco em provas de circuito e veículos licenciados com múltiplas opções de ajuste?
                             </label>
-                            <div style="text-align:justify; margin-left:0.5cm; font-size:0.5cm;">
+                            <div style="text-align:justify; margin-left:0.5cm;">
                                 <input type="radio" name="r10" value="Assetto Corsa"> Assetto Corsa<br>
                                 <input type="radio" name="r10" value="Gran Turismo"> Gran Turismo<br>
                                 <input type="radio" name="r10" value="Project CARS"> Project CARS<br>
@@ -324,7 +449,7 @@
                 </div>
 
 
-                <div class="text-center">
+                <div class="text-center resultado">
                     <button type="button" class="btn btn-primary" onclick="respostas()">Ver o Resultado</button>
                     <button type="reset" class="btn btn-secondary">Limpar</button>
                 </div>
@@ -339,16 +464,16 @@
                 const sparkContainer = document.querySelector('.spark-container');
                 const pageHeight = document.documentElement.scrollHeight;
             
-                for (let i = 0; i < 30; i++) { // Adiciona 20 faíscas para cobrir a tela
+                for (let i = 0; i < 30; i++) { // Adiciona 30 faíscas para cobrir a tela
                     const spark = document.createElement('div');
                     spark.classList.add('spark');
                     
                     // Define posição horizontal aleatória e atraso de animação aleatório
                     spark.style.left = Math.random() * 100 + 'vw';
-                    spark.style.animationDelay = Math.random() * 3 + 's';
+                    spark.style.animationDelay = Math.random() * 0.1 + 's';
                     
                     // Define duração de animação aleatória entre 8s e 12s para variação
-                    spark.style.animationDuration = Math.random() * 4 + 8 + 's'; 
+                    spark.style.animationDuration = Math.random() * 3 + 6 + 's'; 
                     
                     sparkContainer.appendChild(spark);
                 }

@@ -1,6 +1,6 @@
 
 .bg-card:hover{
-    transform: scale(1.01);
+    transform: scale(1.1);
     transition-duration: 1s;
     position: relative;
     padding: 0px;
@@ -56,7 +56,7 @@
     height: 100%    ;
     overflow: hidden;
     pointer-events: none; /* Permite que as faíscas fiquem apenas como decoração */
-    z-index: 0;
+    z-index: -1;
 }
 
 /* Estilização das faíscas */
@@ -70,6 +70,7 @@
     opacity: 0;
     filter: blur(2px); /* Aplica um leve desfoque */
     animation: rise 1s linear infinite;
+    z-index: -1;
 }
 
 /* Animação das faíscas */

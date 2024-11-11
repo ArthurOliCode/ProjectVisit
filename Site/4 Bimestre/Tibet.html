@@ -17,59 +17,6 @@
 </head>
 
 <body class="gradient-bg text-light">
-    
-    <style>
-        /* CSS para controlar a exibição dos itens com base na altura da tela */
-        @media (min-height: 800px) {
-            .nav-item.dropdown {
-                display: none;
-            }
-            .nav-item.game-item {
-                display: block;
-            }
-        }
-        /* Aumentar o espaçamento entre itens em telas grandes */
-        @media (min-width: 992px) {
-            .navbar-nav {
-                gap: 60px; /* Define a distância entre os itens */
-            }
-        }
-    
-        @media (max-height: 799px) {
-            .nav-item.dropdown {
-                display: block;
-            }
-            .nav-item.game-item {
-                display: none;
-            }
-
-        }
-       /* Exibir offcanvas em telas pequenas */
-       @media (max-width: 991px) {
-            .navbar-collapse {
-                display: none !important; /* Oculta a navbar para telas menores */
-            }
-            .offcanvas {
-                display: block !important;
-            }
-            .navbar-toggler {
-                display: block; /* Exibe o botão do menu */
-            }
-            .intro-text {
-                display: block; /* Exibe o texto de introdução */
-            }
-        }
-
-        /* Ocultar o texto de introdução em telas maiores */
-        .intro-text {
-            display: none;
-        }
-
-        /* Navbar fixa para impedir que ocupe mais do que o necessário */
-        .navbar {
-            max-width: 100%;
-            overflow: hidden; /* Impede que a navbar expanda demais */
-        }
     </style>
     
     <div class="container-fluid">
@@ -87,13 +34,12 @@
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
-                    <div class="intro-text" style="font-size: larger; margin: 5%;">Aqui estão alguns jogos para que você aprenda se divertindo!!!</div> 
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <div class="intro-text" style="margin: 5%;">Aqui estão alguns jogos para que você aprenda se divertindo!!!</div> 
+                    <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
+
                         <!-- Dropdown visível em telas menores -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Lista de Jogos
-                            </a>
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Lista de Jogos</a>
                             <ul class="dropdown-menu dropdown-menu-dark">
                                 <li><h6 class="dropdown-header">Adivinhação</h6></li>
                                 <li><a class="dropdown-item" href="AdivImg.html">Imagens</a></li>
@@ -124,6 +70,7 @@
             </div>
         </nav>
     </div>
+
 
 
     <!-- Conteúdo do Teste Tibetano -->

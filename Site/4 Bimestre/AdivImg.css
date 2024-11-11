@@ -4,7 +4,7 @@
 }
 
 .gradient-bg{
-    background: linear-gradient(90deg, rgb(0, 0, 0), rgb(83, 83, 83), rgb(128, 128, 128) );
+    background: linear-gradient(90deg, rgb(0, 0, 0), rgb(23, 42, 44), rgb(30, 94, 102) );
     background-size: 400% 400%;
     animation: gradientAnimation 12s ease infinite;
     color: whitesmoke;
@@ -32,6 +32,42 @@
     filter:contrast(1);
     transition-duration: 0.5s;
 }
+
+
+@media(max-width: 1024px){
+    .catálogo{
+        display: none;
+    }
+}
+
+/* Diminuir fonte em telas menores*/
+@media(max-width: 991px) and (min-width:767px){
+    div{
+        font-size: 12px;
+    }
+}
+@media(min-width: 319px) and (max-width: 765px){
+    div{
+        font-size: 10px;
+    }
+    .form-check{
+        transform: scale(0.8);
+    }
+    .img-Adiv{
+        transform: scale(1.8);
+        max-width: 50%;
+    }
+    .check-resp{
+        transform: scale(0.8);
+    }
+}
+
+
+
+.table-responsive{
+    overflow-x: auto; /* Adiciona rolagem horizontal para tabelas */
+}
+
 
 
 .Id-TabelaImagens{

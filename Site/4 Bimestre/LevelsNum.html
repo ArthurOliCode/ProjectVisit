@@ -11,60 +11,6 @@
     <title>ProjectVs</title>
 </head>
 <body class="gradientBodyNum">
-    <style>
-        /* CSS para controlar a exibição dos itens com base na altura da tela */
-        @media (min-height: 800px) {
-            .nav-item.dropdown {
-                display: none;
-            }
-            .nav-item.game-item {
-                display: block;
-            }
-        }
-        /* Aumentar o espaçamento entre itens em telas grandes */
-        @media (min-width: 992px) {
-            .navbar-nav {
-                gap: 60px; /* Define a distância entre os itens */
-            }
-        }
-    
-        @media (max-height: 799px) {
-            .nav-item.dropdown {
-                display: block;
-            }
-            .nav-item.game-item {
-                display: none;
-            }
-
-        }
-       /* Exibir offcanvas em telas pequenas */
-       @media (max-width: 991px) {
-            .navbar-collapse {
-                display: none !important; /* Oculta a navbar para telas menores */
-            }
-            .offcanvas {
-                display: block !important;
-            }
-            .navbar-toggler {
-                display: block; /* Exibe o botão do menu */
-            }
-            .intro-text {
-                display: block; /* Exibe o texto de introdução */
-            }
-        }
-
-        /* Ocultar o texto de introdução em telas maiores */
-        .intro-text {
-            display: none;
-        }
-
-        /* Navbar fixa para impedir que ocupe mais do que o necessário */
-        .navbar {
-            max-width: 100%;
-            overflow: hidden; /* Impede que a navbar expanda demais */
-        }
-    </style>
-    
     <div class="container-fluid">
         <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark fixed-top shadow-NavBar" data-bs-theme="dark">
             <button class="navbar-toggler animated-Button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-label="Toggle navigation">
@@ -73,20 +19,18 @@
             <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title" id="offcanvasMenuLabel">
-                        <a class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" style="font-size: x-large;">
+                        <a class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" style="font-size: x-large;" href="Index4B.html">
                             <img src="img/houseIcon.png" class="rounded float-start" style="margin-top: 0.25cm; margin-right: 0.5cm;" alt="..." width="20">Menu de Jogos
                         </a>
                     </h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
-                    <div class="intro-text" style="font-size: larger; margin: 5%;">Aqui estão alguns jogos para que você aprenda se divertindo!!!</div> 
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <div class="intro-text"  style="margin: 5%;">Aqui estão alguns jogos para que você aprenda se divertindo!!!</div> 
+                    <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
                         <!-- Dropdown visível em telas menores -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Lista de Jogos
-                            </a>
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Lista de Jogos</a>
                             <ul class="dropdown-menu dropdown-menu-dark">
                                 <li><h6 class="dropdown-header">Adivinhação</h6></li>
                                 <li><a class="dropdown-item" href="AdivImg.html">Imagens</a></li>
@@ -118,21 +62,21 @@
         </nav>
     </div>
 
-        <div class="main">
+        <div class="main" style="text-align: center;">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h4 class="display-2" style="margin-top: 2cm; margin-left: 8.4cm; font-family:Arial;">Torre de desafios</h4>
+                        <h4 class="display-2 título" style="margin-top: 2cm; font-family:Arial;">Torre de desafios</h4>
                     </div>
                 </div>
             </div>
-            <div class="container">
+            <div class="container" style="padding-left: 15%;">
                 <div class="row">
                     <div class="col-12">
-                        <div class="card text-bg-dark text-center border-light mb-3 neon-border" style="max-width: 20cm; margin-left: 6cm; margin-top: 2cm; border-radius: 2%;">
+                        <div  class="card text-bg-dark text-center border-light neon-border" style="max-width: 80%; margin-top: 10%; border-radius: 2%;">
                             <div class="card-Header"><h5 class="display-6">Fácil</h5></div>
                             <div class="card-body">
-                                <p style="text-align: justify; font-size:0.4cm; margin:1cm;">Se jogue no primeiro nivel de adivinhação, você irá competir
+                                <p style="text-align: justify;">Se jogue no primeiro nivel de adivinhação, você irá competir
                                     contra uma máquina, ela pensará em um número entre 1 à 10, e
                                     você dará seus palpites!! Se esforce e acerte o maior número
                                     de vezes possíveis!!
@@ -145,10 +89,10 @@
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <div class="card text-bg-dark text-center border-light mb-3 neon-border" style="max-width: 20cm; margin-left: 6cm; margin-top: 2cm; border-radius: 2%;">
+                        <div  class="card text-bg-dark text-center border-light neon-border" style="max-width: 80%; margin-top: 10%; border-radius: 2%;">
                             <div class="card-Header"><h5 class="display-6">Moderado</h5></div>
                             <div class="card-body">
-                                <p style="text-align: justify; font-size:0.4cm; margin:1cm;">Quer um pouco mais de desafio?! 
+                                <p style="text-align: justify;">Quer um pouco mais de desafio?! 
                                     Seja um adivinho nível dois! Você irá competir
                                 contra uma máquina, ela pensará em um número entre 1 à 50, e
                                     você dará seus palpites!! Se esforce e acerte o maior número
@@ -162,10 +106,10 @@
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <div class="card text-bg-dark text-center border-light mb-3 neon-border" style="max-width: 20cm; margin-left: 6cm; margin-top: 2cm; border-radius: 2%;">
+                        <div class="card text-bg-dark text-center border-light neon-border" style="max-width: 80%; margin-top: 10%; border-radius: 2%;">
                             <div class="card-Header"><h5 class="display-6">Difícil</h5></div>
                             <div class="card-body">
-                                <p style="text-align: justify; font-size:0.4cm; margin:1cm;">
+                                <p style="text-align: justify;">
                                     Você se acha o mestre dos magos 🐦‍⬛?! Então tente a sorte! Você irá competir
                                     contra uma máquina, ela pensará em um número de 1 à 100, e você dará seus palpites!!
                                     Mas será que você conseguirá acertar??
