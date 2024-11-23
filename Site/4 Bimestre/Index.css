@@ -43,7 +43,7 @@
 
 
 /* CSS para controlar a exibição dos itens com base na altura da tela */
-@media (min-width: 1024px) {
+@media (min-width: 992px) {
     .nav-item.dropdown {
         display: none;
     }
@@ -81,8 +81,8 @@
     }
 }
 
-
-@media (max-height: 799px) {
+/*Exibição do dropdown de acordo com a altura da tela*/
+@media (max-height: 540px) and (max-width: 991px) and (max-width:not(998px)) {
     .nav-item.dropdown {
         display: block;
     }
@@ -111,7 +111,7 @@
 
 
 /* Navbar fixa para impedir que ocupe mais do que o necessário */
-.navbar {
+.navbar{
     max-width: 100%;
     overflow: hidden; /* Impede que a navbar expanda demais */
 }
